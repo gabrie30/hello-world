@@ -10,14 +10,17 @@ import (
 func main() {
 
 	http.HandleFunc("/healthz", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Println("/healthy called")
 		fmt.Fprintf(w, "healthy")
 	})
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Println("/ called")
 		fmt.Fprintf(w, "hello-world")
 	})
 
 	http.HandleFunc("/timeout", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Println("/timeout called")
 		time.Sleep(10 * time.Second)
 		fmt.Fprintf(w, "10 seconds")
 	})
