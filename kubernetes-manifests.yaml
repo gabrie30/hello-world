@@ -20,6 +20,7 @@ spec:
       containers:
       - image: gabrie30/hello-world
         name: helloworld
+        imagePullPolicy: Always
         resources: {}
 status: {}
 ---
