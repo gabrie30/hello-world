@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: hello-world-dep
+  name: hello-world-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-world-dep
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: hello-world-dep
+    spec:
+      containers:
+      - image: gabrie30/hello-world
+        name: helloworld
+        resources: {}
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: hello-world-dep
+  name: hello-world-dep
+spec:
+  ports:
+  - name: 8080-8080
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: hello-world-dep
+  type: ClusterIP
+status:
+  loadBalancer: {}
