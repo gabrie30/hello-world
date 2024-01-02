@@ -7,7 +7,7 @@ A basic hello world app that runs in kubernetes on port 8080, has a few extra en
 Quick deploy using 
 
 ```bash
-kubectl apply -f https://github.com/gabrie30/hello-world/blob/main/kubernetes-manifests.yaml
+kubectl apply -f https://raw.githubusercontent.com/gabrie30/hello-world/main/kubernetes-manifests.yaml
 ```
 
 ## Dockerhub
