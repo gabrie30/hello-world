@@ -14,7 +14,6 @@ kubectl apply -f https://raw.githubusercontent.com/gabrie30/hello-world/main/kub
 
 https://hub.docker.com/r/gabrie30/hello-world
 
-```
 Supported Endpoints (see repo for complete list in main.go)
 
 * `/ => "hello-world"`
@@ -22,4 +21,4 @@ Supported Endpoints (see repo for complete list in main.go)
 * `/healthz => "healthz"`
 
 * `/timeout?sleep=3 => will sleep for 3 seconds then respond with "Slept for 3 seconds"`
-​```
+​
